@@ -12,17 +12,18 @@ class TicTacToeGame:
         print()
         print()
         for row in self.list:
+            print("       |       |       ")
             for i in range(len(row)):
                 
-                print("  "+row[i]+"  ",end="")
+                print("   "+row[i]+"   ",end="")
                 if i !=2:
                     print('|',end='')
             print()
             c+=1
             if c!=3:
-                print("_____|_____|_____") 
+                print("_______|_______|_______")
             else:
-                print("     |     |     ")
+                print("       |       |       ")
     def checker(self,list,EnteredEle,indices):
         win=True
         for i in range(3):
@@ -93,7 +94,7 @@ class TicTacToeGame:
             x=obj.checker(list,EnteredEle,indices)
             #print(x,EnteredEle,indices,list)
             if x:
-                print("Ooo '"+EnteredEle+"' partipant won")
+                print(EnteredEle+"' partipant won .... Gelichavu Babu")
                 break
 obj=TicTacToeGame()
 obj.start()
